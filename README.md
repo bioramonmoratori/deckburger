@@ -19,6 +19,10 @@ de itens.
 - Thymeleaf
 - Bootstrap [v5.2.0-beta1]
 
+## Link
+
+- Deploy na AWS: 
+
 ## Apoio
 
 - Restaurante: `@deckburgerbq` [Instagram]
