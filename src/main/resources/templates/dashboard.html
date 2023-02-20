@@ -1,0 +1,42 @@
+<html>
+
+	<head>
+	
+	<title>Deck Burger</title>
+		<meta charset="UTF-8"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	</head>
+	
+	<body>
+		<div align="center">
+			<br>
+			<h1>C A R D Á P I O</h1>
+			
+			<div align="center" class="card-body">
+				<a href="/logout"><button>Logout</button></a><br><br>
+				<a href="/criaritem"><button>Criar Item</button></a>
+			</div>
+			<h3>---------------------------------</h3>
+			<div th:each="item : ${listadeitens}">
+				
+				<h3>---------------------------------</h3>
+				
+				<b><span th:text=" ${item.titulo} "> -
+				</span></b><br>
+				<label><b>ID:</b> </label><span th:text=" ${item.id} "> -
+				</span>
+				<label>| <b>Preço:</b> </label><span th:text=" ${item.preco} "> -
+				</span>
+				<label>| <b>Descrição:</b> </label><span th:text=" ${item.descricao} "> -
+				</span>
+				<label>| <b>Classificação:</b> </label><span th:text=" ${item.classificacao} "> -
+				</span><br>
+				<form th:action="@{/deletaritem/{id}(id=${item.id})}" method="get">
+  					<button type="submit">Deletar</button>
+				</form>
+			</div>
+		</div>
+		<br>
+	</body>
+
+</html>

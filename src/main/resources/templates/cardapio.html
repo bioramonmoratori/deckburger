@@ -1,0 +1,309 @@
+<html>
+
+	<head>
+	
+	<title>Deck Burger</title>
+		<meta charset="UTF-8"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+		<style>
+			@import url('https://fonts.cdnfonts.com/css/gotham');
+			.gotham{
+				font-family: 'Gotham Black', sans-serif;
+				font-size:140px;
+				color: #FFFFFF;
+				
+			}
+			@import url('https://fonts.cdnfonts.com/css/montserrat');
+			.montserrat{
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 800;
+				text-transform: uppercase;
+				color: #FFFFFF;
+				font-size: 35px;
+			}
+			.montserratmenor{
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 250;
+				text-transform: uppercase;
+				color: #FFFFFF;
+				font-size: 25px;
+				text-align: center;
+        		max-width: 700px;
+        		word-wrap: break-word;
+			}
+			.tamanhoDaOnda{
+				width:238px;
+				height:84px;
+				
+			}
+			.linha{
+				width:1000px;
+				height:50px;
+				
+			}
+			.opcao{
+				width:800px;
+				height:250px;
+				
+			}
+			#entradas{
+				opacity:0;
+				transform: translateY(20px);
+  				transition: opacity 0.8s ease-in-out, transform 1s ease-in-out;
+			}
+			#burgers{
+				opacity:0;
+				transform: translateY(20px);
+  				transition: opacity 0.8s ease-in-out, transform 1s ease-in-out;
+			}
+			#porcoes{
+				opacity:0;
+				transform: translateY(20px);
+  				transition: opacity 0.8s ease-in-out, transform 1s ease-in-out;
+			}
+			#cervejas{
+				opacity:0;
+				transform: translateY(20px);
+  				transition: opacity 0.8s ease-in-out, transform 1s ease-in-out;
+			}
+			#bebidas{
+				opacity:0;
+				transform: translateY(20px);
+  				transition: opacity 0.8s ease-in-out, transform 1s ease-in-out;
+			}
+			
+			#entradas.up {
+  				transform: translateY(0);
+			}
+
+			#entradas.down {
+  				transform: translateY(20px);
+  				transition: transform 1s ease-in-out;
+			}
+			
+			#burgers.up {
+  				transform: translateY(0);
+			}
+
+			#burgers.down {
+  				transform: translateY(20px);
+  				transition: transform 1s ease-in-out;
+			}
+			
+			#porcoes.up {
+  				transform: translateY(0);
+			}
+
+			#porcoes.down {
+  				transform: translateY(20px);
+  				transition: transform 1s ease-in-out;
+			}
+			
+			#cervejas.up {
+  				transform: translateY(0);
+			}
+
+			#cervejas.down {
+  				transform: translateY(20px);
+  				transition: transform 1s ease-in-out;
+			}
+			
+			#bebidas.up {
+  				transform: translateY(0);
+			}
+
+			#bebidas.down {
+  				transform: translateY(20px);
+  				transition: transform 1s ease-in-out;
+			}
+			
+			
+
+		</style>
+		
+		<script>
+	      window.onscroll = function() {
+	    	     
+	    	  var windowPosition = window.pageYOffset + window.innerHeight;
+
+	    	  var entradas = document.getElementById("entradas");
+	    	  var entradasPosition = entradas.getBoundingClientRect().top + window.pageYOffset;
+
+	    	  var burgers = document.getElementById("burgers");
+	    	  var burgersPosition = burgers.getBoundingClientRect().top + window.pageYOffset;
+
+	    	  var porcoes = document.getElementById("porcoes");
+	    	  var porcoesPosition = porcoes.getBoundingClientRect().top + window.pageYOffset;
+
+	    	  var cervejas = document.getElementById("cervejas");
+	    	  var cervejasPosition = cervejas.getBoundingClientRect().top + window.pageYOffset;
+
+	    	  var bebidas = document.getElementById("bebidas");
+	    	  var bebidasPosition = bebidas.getBoundingClientRect().top + window.pageYOffset;
+
+	    	  
+	    	   if (windowPosition > entradasPosition && windowPosition < burgersPosition) {
+	    	        entradas.style.opacity = "1";
+	    	        entradas.classList.remove('down');
+	    	        entradas.classList.add('up');
+	    	   } else {
+	    		    entradas.style.opacity = "0";
+	    	        entradas.classList.remove('up');
+	    	        entradas.classList.add('down');
+	    	   }
+	    	   
+	    
+	    	   if (windowPosition > burgersPosition && windowPosition < porcoesPosition) {
+	    	        burgers.style.opacity = "1";
+	    	        burgers.classList.remove('down');
+	    	        burgers.classList.add('up');
+	    	   } else {
+	    		    burgers.style.opacity = "0";
+	    	        burgers.classList.remove('up');
+	    	        burgers.classList.add('down');
+	    		   
+	    	   }
+	    	   
+	    	   
+
+	    	   if (windowPosition > porcoesPosition && windowPosition < cervejasPosition) {
+	    	        porcoes.style.opacity = "1";
+	    	        porcoes.classList.remove('down');
+	    	        porcoes.classList.add('up');
+	    	   } else {
+	    		    porcoes.style.opacity = "0";
+	    	        porcoes.classList.remove('up');
+	    	        porcoes.classList.add('down');
+	    		   
+	    	   }
+
+	    	   if (windowPosition > cervejasPosition) {
+	    	        cervejas.style.opacity = "1";
+	    	        cervejas.classList.remove('down');
+	    	        cervejas.classList.add('up');
+	    	        
+	    	        bebidas.style.opacity = "1";
+	    	        bebidas.classList.remove('down');
+	    	        bebidas.classList.add('up');
+	    	   } else {
+	    		    cervejas.style.opacity = "0";
+	    	        cervejas.classList.remove('up');
+	    	        cervejas.classList.add('down');
+	    		   
+	    	        bebidas.style.opacity = "0";
+	    	        bebidas.classList.remove('up');
+	    	        bebidas.classList.add('down');
+	    	   }
+			        
+			       
+
+    	   }
+		
+		</script>
+		
+	</head>
+	
+	<body style="background-color:#1d1d1b;">
+		
+		<div style="background-color:#1d1d1b;top: 18%; left: 50%; " class="jumbotron">
+			<br>
+			<div align="center" class="gotham" style="min-width:1500px;"> <img src="/onda.png" class="tamanhoDaOnda"/> MENU <img src="/onda.png" class="tamanhoDaOnda"/></div>
+			<br>
+			<p align="center" style="min-width:1500px;"><img src="/linha.png" class="linha"/></p>
+			<br>
+		</div>
+		<br><br>
+		
+		
+		<p align="center" style="min-width:1500px;"><img src="/entradas.png" class="opcao" /></p>
+		<br><br>
+		<div id="entradas" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 40px; margin:60px;">
+			<div align="center" th:each="item : ${listadeitens}" th:style="${#strings.toUpperCase(item.classificacao) == 'ENTRADA'} ? '' : 'display: none;'">
+				<div th:if="${#strings.toUpperCase(item.classificacao) == 'ENTRADA'}">
+					<img th:src="'data:image/jpeg;base64,' + ${item.imagem}" style="height:40%;"/>
+					<br><br>
+					<span th:text=" ${item.titulo}" class="montserrat"> -</span><br>
+					<span th:text=" ${item.preco}" class="montserrat"> -</span><br><br>
+					<p th:text=" ${item.descricao}" class="montserratmenor"> -</p>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="" style="background-color: #FFFFFF; height:10px; min-width:1500px;"></div>
+		<br><br>
+		
+		<p align="center" style="min-width:1500px;"><img src="/burgers.png" class="opcao"/></p>
+		<br><br>
+		<div id="burgers" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 40px; margin:60px;">
+			<div align="center" th:each="item : ${listadeitens}" th:style="${#strings.toUpperCase(item.classificacao) == 'BURGER'} ? '' : 'display: none;'">
+				<div th:if="${#strings.toUpperCase(item.classificacao) == 'BURGER'}">
+					<img th:src="'data:image/jpeg;base64,' + ${item.imagem}" style="height: 40%;"/>
+					<br><br>
+					<span th:text=" ${item.titulo}" class="montserrat"> -</span><br>
+					<span th:text=" ${item.preco}" class="montserrat"> -</span><br><br>
+					<p th:text=" ${item.descricao}" class="montserratmenor"> -</p>
+					
+					<br><br><br><br><br>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<div class="jumbotron" style="background-color: #FFFFFF; height:10px; min-width:1500px;"></div>
+		<br><br>
+		
+		<p align="center" style="min-width:1500px;"><img src="/porcoes.png" class="opcao"/></p>
+		<br><br>
+		<div id="porcoes" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 40px; margin:60px;">
+			<div align="center" th:each="item : ${listadeitens}" th:style="${#strings.toUpperCase(item.classificacao) == 'PORCAO'} ? '' : 'display: none;'">
+				<div th:if="${#strings.toUpperCase(item.classificacao) == 'PORCAO'}">
+					<img th:src="'data:image/jpeg;base64,' + ${item.imagem}" style="height: 40%;"/>
+					<br><br>
+					<span th:text=" ${item.titulo}" class="montserrat"> -</span><br>
+					<span th:text=" ${item.preco}" class="montserrat"> -</span><br><br>
+					<p th:text=" ${item.descricao}" class="montserratmenor"> -</p>
+					
+					<br><br><br><br><br>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<div class="jumbotron" style="background-color: #FFFFFF; height:10px; min-width:1500px;"></div>
+		<br><br>
+		
+		<p align="center" style="min-width:1500px;"><img src="/cervejas.png" class="opcao"/></p>
+		<br><br>
+		<div id="cervejas">
+			<div align="center" th:each="item : ${listadeitens}" style="min-width:1500px;">
+				<div th:if="${#strings.toUpperCase(item.classificacao) == 'CERVEJA'}">
+					<p class="montserrat"><span th:text=" ${item.titulo}"  class="montserrat"> -</span>: 
+					<span th:text=" ${item.preco}" class="montserrat"> -</span></p>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<div class="jumbotron" style="background-color: #FFFFFF; height:10px; min-width:1500px;"></div>
+		<br><br>
+		
+		<p align="center" style="min-width:1500px;"><img src="/bebidas.png" class="opcao"/></p>
+		<br><br>
+		<div id="bebidas">
+			<div align="center" th:each="item : ${listadeitens}" style="min-width:1500px;">
+				<div th:if="${#strings.toUpperCase(item.classificacao) == 'BEBIDA'}">
+					<p class="montserrat"><span th:text=" ${item.titulo}" class="montserrat"> -</span>: 
+					<span th:text=" ${item.preco}" class="montserrat"> -</span></p>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
