@@ -6,6 +6,8 @@ Repositório dedicado ao site cardápio do restaurante Deck Burger, localizado e
 lerem o QR-Code das mesas e acessar a lista de produtos. Além disso, existe um endpoint privado para o estabelecimento realizar a adição e deleção
 de itens.
 
+![cardapio](https://user-images.githubusercontent.com/90486302/220179690-2d0109ac-72f7-410d-bf38-efd3993b96e8.png)
+
 ## Tecnologias
 
 - Java [v.17]
