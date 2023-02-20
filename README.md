@@ -4,7 +4,7 @@
 
 Repositório dedicado ao site cardápio do restaurante Deck Burger, localizado em Barbacena - MG. O objetivo do projeto foi permitir aos clientes
 lerem o QR-Code das mesas e acessar a lista de produtos. Além disso, existe um endpoint privado para o estabelecimento realizar a adição e deleção
-de itens.
+de itens. O estilo da página foi elaborado pela empresa New Ágora.
 
 ![cardapio](https://user-images.githubusercontent.com/90486302/220179690-2d0109ac-72f7-410d-bf38-efd3993b96e8.png)
 
@@ -26,7 +26,7 @@ de itens.
 ## Apoio
 
 - Restaurante: `@deckburgerbq` [Instagram]
-- Empresa de Marketing: `@newagoramkt` [Instagram]
+- Empresa de Marketing & Designer: `@newagoramkt` [Instagram]
 
 ## Contato
 
