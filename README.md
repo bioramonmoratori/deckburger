@@ -21,7 +21,7 @@ de itens. O estilo da página foi elaborado pela empresa New Ágora.
 
 ## Link
 
-- Deploy na AWS: 
+- Deploy na AWS: `http://bit.ly/3SodQvK`
 
 ## Apoio
 
